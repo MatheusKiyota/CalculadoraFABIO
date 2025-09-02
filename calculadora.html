@@ -41,6 +41,9 @@
         <div id="resultadoDiv"></div>
         <div id="imagemDivisao"></div>
   </div>
+
+  <button onclick="limparTudo()">Limpar tudo</button>
+
     
 
 
@@ -103,6 +106,15 @@
             document.getElementById("imagemDivisao").innerHTML = '';
         }
     }
+
+    function limparTudo() {
+    let ids = ['adicao1', 'adicao2', 'sub1', 'sub2', 'mult1', 'mult2', 'div1', 'div2'];
+    ids.forEach(id => document.getElementById(id).value = '');
+
+    let resultados = ['resultado', 'resultadoSub', 'resultadoMult', 'resultadoDiv'];
+    resultados.forEach(id => document.getElementById(id).textContent = '');
+}
+
 </script>
 
 </body>
