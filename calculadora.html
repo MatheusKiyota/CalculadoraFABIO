@@ -21,6 +21,13 @@
     <button onclick="subtrair()">Calcular</button>
     <div id="resultadoSub"></div>
 
+    <h3>Multiplicação</h3>
+    <input type="text" id="mult1"> x
+    <input type="text" id="mult2">
+    <button onclick="multiplicacao()">Calcular</button>
+    <div id="resultadoMult"></div>
+    
+
 
     <script>
         function somar(){ 
@@ -37,6 +44,14 @@
 
             let resultado = num_sub1 - num_sub2;
             document.getElementById("resultadoSub").textContent = "Resultado: " + resultado;
+        }
+
+        function multiplicacao(){ 
+            let num_mult1 = parseFloat(document.getElementById("mult1").value);
+            let num_mult2 = parseFloat(document.getElementById("mult2").value);
+
+            let resultado = num_mult1 * num_mult2;
+            document.getElementById("resultadoMult").textContent = "Resultado: " + resultado;
         }
     </script>
 </body>
