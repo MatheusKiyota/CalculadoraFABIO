@@ -13,7 +13,15 @@
     <input type="text" id="adicao2">
     <button onclick="somar()">Calcular</button>
     <div id="resultado"></div>
-    
+
+
+      <h3>Subtração</h3>
+    <input type="text" id="sub1"> -
+    <input type="text" id="sub2">
+    <button onclick="subtrair()">Calcular</button>
+    <div id="resultadoSub"></div>
+
+
     <script>
         function somar(){ 
             let num_soma1 = parseFloat(document.getElementById("adicao1").value);
@@ -21,6 +29,14 @@
 
             let resultado = num_soma1 + num_soma2;
             document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        }
+
+         function subtrair(){ 
+            let num_sub1 = parseFloat(document.getElementById("sub1").value);
+            let num_sub2 = parseFloat(document.getElementById("sub2").value);
+
+            let resultado = num_sub1 - num_sub2;
+            document.getElementById("resultadoSub").textContent = "Resultado: " + resultado;
         }
     </script>
 </body>
