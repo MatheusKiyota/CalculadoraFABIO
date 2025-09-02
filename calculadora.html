@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quatro operações básicas</title>
 </head>
 <body>
+    <h1>Quatro operações básicas</h1>
     
+    <h3>Adição</h3>
+    <input type="text" id="adicao1"> +
+    <input type="text" id="adicao2">
+    <button onclick="somar()">Calcular</button>
+    <div id="resultado"></div>
+    
+    <script>
+        function somar(){ 
+            let num_soma1 = parseFloat(document.getElementById("adicao1").value);
+            let num_soma2 = parseFloat(document.getElementById("adicao2").value);
+
+            let resultado = num_soma1 + num_soma2;
+            document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        }
+    </script>
 </body>
 </html>
