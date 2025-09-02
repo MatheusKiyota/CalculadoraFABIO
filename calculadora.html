@@ -29,6 +29,7 @@
         <input type="text" id="mult2">
         <button onclick="multiplicacao()">Calcular</button>
         <div id="resultadoMult"></div>
+        <div id="imagemMultiplicacao"></div>
 
         <h3>Divisão</h3>
         <input type="text" id="div1"> /
@@ -68,15 +69,17 @@
         }
     }
 
-    function multiplicacao(){ 
+       function multiplicacao() {
         let num_mult1 = parseFloat(document.getElementById("mult1").value);
         let num_mult2 = parseFloat(document.getElementById("mult2").value);
 
         if (!isNaN(num_mult1) && !isNaN(num_mult2)) {
             let resultado = num_mult1 * num_mult2;
             document.getElementById("resultadoMult").textContent = "Resultado: " + resultado;
+            document.getElementById("imagemMultiplicacao").innerHTML = '<img src="images/incorreto.jpg" alt="Sucesso" width="200">';
         } else {
             document.getElementById("resultadoMult").textContent = "Por favor, insira dois números válidos.";
+            document.getElementById("imagemMultiplicacao").innerHTML = '';
         }
     }
 
