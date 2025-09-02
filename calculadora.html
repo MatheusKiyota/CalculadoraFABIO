@@ -16,71 +16,86 @@
         <div id="imagemSucesso"></div>
 
 
-      <h3>Subtração</h3>
-    <input type="text" id="sub1"> -
-    <input type="text" id="sub2">
-    <button onclick="subtrair()">Calcular</button>
-    <div id="resultadoSub"></div>
+        <h3>Subtração</h3>
+        <input type="text" id="sub1"> -
+        <input type="text" id="sub2">
+        <button onclick="subtrair()">Calcular</button>
+        <div id="resultadoSub"></div>
+        <div id="imagemSubtracao"></div>
     
 
-    <h3>Multiplicação</h3>
-    <input type="text" id="mult1"> x
-    <input type="text" id="mult2">
-    <button onclick="multiplicacao()">Calcular</button>
-    <div id="resultadoMult"></div>
+        <h3>Multiplicação</h3>
+        <input type="text" id="mult1"> x
+        <input type="text" id="mult2">
+        <button onclick="multiplicacao()">Calcular</button>
+        <div id="resultadoMult"></div>
 
-     <h3>Divisão</h3>
-    <input type="text" id="div1"> /
-    <input type="text" id="div2">
-    <button onclick="divisao()">Calcular</button>
-    <div id="resultadoDiv"></div>
+        <h3>Divisão</h3>
+        <input type="text" id="div1"> /
+        <input type="text" id="div2">
+        <button onclick="divisao()">Calcular</button>
+        <div id="resultadoDiv"></div>
 
     
 
 
-    <script>
-        function somar() {
-            let num_soma1 = parseFloat(document.getElementById("adicao1").value);
-            let num_soma2 = parseFloat(document.getElementById("adicao2").value);
+   <script>
+    function somar() {
+        let num_soma1 = parseFloat(document.getElementById("adicao1").value);
+        let num_soma2 = parseFloat(document.getElementById("adicao2").value);
 
-
-            if (!isNaN(num_soma1) && !isNaN(num_soma2)) {
-                let resultado = num_soma1 + num_soma2;
-                document.getElementById("resultado").textContent = "Resultado: " + resultado;
-
-              
-                document.getElementById("imagemSucesso").innerHTML = '<img src="images/certo.jpg" alt="Sucesso" width="200">';
-            } else {
-                document.getElementById("resultado").textContent = "Por favor, insira dois números válidos.";
-                document.getElementById("imagemSucesso").innerHTML = ''; 
-        
+        if (!isNaN(num_soma1) && !isNaN(num_soma2)) {
+            let resultado = num_soma1 + num_soma2;
+            document.getElementById("resultado").textContent = "Resultado: " + resultado;
+            document.getElementById("imagemSucesso").innerHTML = '<img src="images/certo.jpg" alt="Sucesso" width="200">';
+        } else {
+            document.getElementById("resultado").textContent = "Por favor, insira dois números válidos.";
+            document.getElementById("imagemSucesso").innerHTML = ''; 
         }
+    }
 
-         function subtrair(){ 
-            let num_sub1 = parseFloat(document.getElementById("sub1").value);
-            let num_sub2 = parseFloat(document.getElementById("sub2").value);
+    function subtrair() {
+        let num_sub1 = parseFloat(document.getElementById("sub1").value);
+        let num_sub2 = parseFloat(document.getElementById("sub2").value);
 
+        if (!isNaN(num_sub1) && !isNaN(num_sub2)) {
             let resultado = num_sub1 - num_sub2;
             document.getElementById("resultadoSub").textContent = "Resultado: " + resultado;
+            document.getElementById("imagemSubtracao").innerHTML = '<img src="images/errado.jpg" alt="Sucesso" width="200">';
+        } else {
+            document.getElementById("resultadoSub").textContent = "Por favor, insira dois números válidos.";
+            document.getElementById("imagemSubtracao").innerHTML = '';
         }
+    }
 
-        function multiplicacao(){ 
-            let num_mult1 = parseFloat(document.getElementById("mult1").value);
-            let num_mult2 = parseFloat(document.getElementById("mult2").value);
+    function multiplicacao(){ 
+        let num_mult1 = parseFloat(document.getElementById("mult1").value);
+        let num_mult2 = parseFloat(document.getElementById("mult2").value);
 
+        if (!isNaN(num_mult1) && !isNaN(num_mult2)) {
             let resultado = num_mult1 * num_mult2;
             document.getElementById("resultadoMult").textContent = "Resultado: " + resultado;
+        } else {
+            document.getElementById("resultadoMult").textContent = "Por favor, insira dois números válidos.";
         }
+    }
 
-         function divisao(){ 
-            let num_div1 = parseFloat(document.getElementById("div1").value);
-            let num_div2 = parseFloat(document.getElementById("div2").value);
+    function divisao(){ 
+        let num_div1 = parseFloat(document.getElementById("div1").value);
+        let num_div2 = parseFloat(document.getElementById("div2").value);
 
-            let resultado = num_div1 / num_div2;
-            document.getElementById("resultadoDiv").textContent = "Resultado: " + resultado;
+        if (!isNaN(num_div1) && !isNaN(num_div2)) {
+            if (num_div2 === 0) {
+                document.getElementById("resultadoDiv").textContent = "Erro: Divisão por zero.";
+            } else {
+                let resultado = num_div1 / num_div2;
+                document.getElementById("resultadoDiv").textContent = "Resultado: " + resultado;
+            }
+        } else {
+            document.getElementById("resultadoDiv").textContent = "Por favor, insira dois números válidos.";
         }
-  }
-        
-    </script>
+    }
+</script>
+
 </body>
 </html>
