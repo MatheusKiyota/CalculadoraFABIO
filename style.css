@@ -1,0 +1,28 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #414446;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
