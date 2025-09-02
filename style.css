@@ -25,4 +25,11 @@ button {
     border-radius: 4px;
 }
 
+.quadro1{
+    float: left;
+    padding-right: 100px;
+}
 
+.quadro2{
+    padding-top: 4px;
+}
